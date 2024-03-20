@@ -5,7 +5,7 @@ pipeline{
 stage('Clone Git Repo'){
    steps{
 
-       git 'https://github.com/bootcanan/CypressWithApi.git'
+       sh 'git clone https://github.com/bootcanan/CypressWithApi.git'
 
    }
 
