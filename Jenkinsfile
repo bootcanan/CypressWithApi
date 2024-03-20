@@ -29,9 +29,9 @@ stage('Run Tests'){
 
 }
 stage('Publish HTML Report'){
-   post{
-   
-       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'reporter-config.json', reportFiles: 'mochawesome.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+   steps{
+
+         publishHTML([ allowMissing:false,alwaysLinkToLastBuild:false,keepAll:false, reportDir:'reporter-config.json',reportFiles: 'report.html',reportName: 'HTML Report', reportTitles: ''])
 
    }
 
