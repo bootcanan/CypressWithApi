@@ -24,7 +24,7 @@ stage('Run Tests'){
      steps{
 
 
-        bat 'npx cypress run'
+        bat 'npx cypress run --reporter mochawesome --reporter-options reportDir="reporter-config.json",overwrite="false",html="false",json="true"'
      }
 
 }
