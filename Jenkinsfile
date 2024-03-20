@@ -30,9 +30,9 @@ stage('Run Tests'){
 }
 stage('Publish HTML Report'){
    post{
-   success{
+   
        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'reporter-config.json', reportFiles: 'mochawesome.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
-   }
+
    }
 
 
