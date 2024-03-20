@@ -2,6 +2,15 @@ pipeline{
 
   agent any
   stages{
+
+
+     stage('check out scm') {
+            when {
+                branch 'main'
+            }
+            steps {
+                checkout scm
+            }}
 stage('Clone Git Repo'){
    steps{
 
