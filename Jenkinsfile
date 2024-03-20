@@ -16,7 +16,7 @@ stage('Install Dependencies'){
 
     steps{
 
-        bat 'npm install'
+        sh 'npm install'
     }
 }
 stage('Run Tests'){
@@ -24,7 +24,7 @@ stage('Run Tests'){
      steps{
 
 
-        bat 'npx cypress run --reporter mochawesome --reporter-options reportDir="reporter-config.json",overwrite="false",html="false",json="true"'
+        sh 'npx cypress run --reporter mochawesome --reporter-options reportDir="reporter-config.json",overwrite="false",html="false",json="true"'
      }
 
 }
