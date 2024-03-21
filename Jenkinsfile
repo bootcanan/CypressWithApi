@@ -36,10 +36,10 @@ stage('Run Tests'){
         sh 'npx cypress run --reporter mochawesome --reporter-options reportDir="reporter-config.json",overwrite="false",html="false",json="true"'
      }
 
-}
-stage('Publish HTML Report'){
+}}
+post{
    
-   steps{
+   success{
        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'reporter-config.json', reportFiles: 'mochawesome.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
    }
    
@@ -49,4 +49,3 @@ stage('Publish HTML Report'){
   }
 
 
-}
